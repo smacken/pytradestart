@@ -1,0 +1,1 @@
+conda create --name tradestart python=3.7
