@@ -42,7 +42,7 @@ def get_companies_frame(data_path):
             share.rename(columns={'ticker': 'Tick'}, inplace=True)
             company = company.merge(share, on='Tick')
             company['Date'] = pd.to_datetime('today')
-  
+
         if company[company.Tick == tick].empty:
             # company_info = pyasx.data.companies.get_company_info(tick)
             company_info = {}

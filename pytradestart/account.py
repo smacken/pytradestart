@@ -11,7 +11,7 @@ import pandas as pd
 def get_dividends(df):
     ''' get dividends from transaction frame '''
     div = df[df['Details'].str.contains('Direct Credit') | df['Details'].str.contains('Credit Interest')]
-    div = div[div['Details'].str.contains('COMMONWEALTH')==False]
+    div = div[div['Details'].str.contains('COMMONWEALTH') is False]
     div["Symbol"] = div["Details"].str.split(' ').str[3]
     df['Date'] = df['Date'].astype('datetime64[ns]')
     df = df.reindex(index=df.index[::-1])
@@ -31,7 +31,7 @@ def get_account_frame(data_path):
     for f in files:
         modified = time.ctime(os.path.getmtime(f))
         mod = datetime.datetime.strptime(modified, "%a %b %d %H:%M:%S %Y")
-        #print(mod.date())
+        print(mod.date())
         df = get_account_transactions(f)
         pkl = f'{data_path}Account.pkl'
         try:
@@ -48,6 +48,6 @@ def get_account_frame(data_path):
         except Exception as e:
             print('no pkl exists', str(e))
         df.to_pickle(pkl)
-    
+
     df = df.sort_values(by=['Date'], ascending=False)
     return df
