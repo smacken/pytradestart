@@ -12,6 +12,13 @@ with open("README.md", "r") as f:
     desc = desc.split("<!-- content -->")[-1]
     desc = re.sub("<[^<]+?>", "", desc)  # Remove html
 
+
+def get_property(prop, project):
+    ''' get a project property: from init '''
+    result = re.search(r'{}\s*=\s*[\'"]([^\'"]*)[\'"]'.format(prop), open(project + '/__init__.py').read())
+    return result.group(1)
+
+
 # Package name
 pname = 'pytradestart'
 
@@ -25,6 +32,7 @@ setuptools.setup(
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
     # version=__version__,
+    version = get_property('__version__', pname),
 
     description='Trading Portfolio',
     long_description=desc,

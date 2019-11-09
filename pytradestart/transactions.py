@@ -22,7 +22,7 @@ def get_transactions(file):
     trans["Qty"] = trans["Details"].str.split(' ').str[1]
     trans["Tick"] = trans["Details"].str.split(' ').str[2]
     trans["Price"] = trans["Details"].str.split(' ').str[4]
-    trans["Type"] = trans.apply(lambda x: 'Sell' if str.startswith(x["Details"], 'S') else "Buy", axis=1)
+    trans["Type"] = (trans.apply(lambda x: 'Sell' if str.startswith(x["Details"], 'S') else "Buy", axis=1))
     trans['Date'] = pd.to_datetime(trans['Date'], format='%d/%m/%Y')
     trans.drop(trans.columns[5], axis=1, inplace=True)
     trans.sort_index(ascending=False, inplace=True)
