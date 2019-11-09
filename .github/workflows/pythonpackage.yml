@@ -50,6 +50,6 @@ jobs:
       run: >-
         python -m
         pep517.build
-        --source
+        --source pytradestart
         --binary
         --out-dir dist/
