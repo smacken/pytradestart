@@ -4,7 +4,9 @@ import os.path
 # import codecs  # To use a consistent encoding
 import setuptools
 import re
+import time
 
+now = str(round(time.time()))
 here = os.path.abspath(os.path.dirname(__file__))
 
 with open("README.md", "r") as f:
@@ -32,7 +34,7 @@ setuptools.setup(
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
     # version=__version__,
-    version = get_property('__version__', pname),
+    version=get_property('__version__', pname) + f'.{now}',
 
     description='Trading Portfolio',
     long_description=desc,
