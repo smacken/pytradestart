@@ -1,5 +1,5 @@
 boto==2.49.0
-boto3==1.11.7
+boto3==1.11.8
 botocore==1.14.8
 certifi==2019.11.28
 chardet==3.0.4
