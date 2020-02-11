@@ -1,6 +1,6 @@
 boto==2.49.0
 boto3==1.11.14
-botocore==1.14.13
+botocore==1.14.14
 certifi==2019.11.28
 chardet==3.0.4
 Click==7.0
