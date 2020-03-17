@@ -17,7 +17,7 @@ jmespath==0.9.5
 joblib==0.14.1
 mccabe==0.6.1
 msgpack==1.0.0
-numpy==1.18.1
+numpy==1.18.2
 pandas==1.0.2
 psutil==5.7.0
 python-dateutil==2.8.1
