@@ -8,7 +8,7 @@ cloudpickle==1.4.1
 dask==2.19.0
 distributed==2.19.0
 docutils==0.16
-featuretools==0.16.0
+featuretools==0.17.0
 fsspec==0.7.4
 future==0.18.2
 HeapDict==1.0.1
