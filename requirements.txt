@@ -36,6 +36,6 @@ tblib==1.6.0
 toolz==0.10.0
 tornado==6.0.4
 tqdm==4.48.0
-urllib3==1.25.9
+urllib3==1.25.10
 wincertstore==0.2
 zict==2.0.0
