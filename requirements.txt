@@ -32,7 +32,7 @@ scipy==1.5.2
 six==1.15.0
 smart-open==2.1.0
 sortedcontainers==2.2.2
-tblib==1.6.0
+tblib==1.7.0
 toolz==0.10.0
 tornado==6.0.4
 tqdm==4.48.0
