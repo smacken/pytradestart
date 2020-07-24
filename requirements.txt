@@ -28,7 +28,7 @@ rope==0.17.0
 s3fs==0.4.2
 s3transfer==0.3.3
 scikit-learn==0.23.1
-scipy==1.5.1
+scipy==1.5.2
 six==1.15.0
 smart-open==2.1.0
 sortedcontainers==2.2.2
