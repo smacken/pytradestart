@@ -9,7 +9,7 @@ dask==2.25.0
 distributed==2.25.0
 docutils==0.16
 featuretools==0.19.0
-fsspec==0.8.0
+fsspec==0.8.1
 future==0.18.2
 HeapDict==1.0.1
 idna==2.10
