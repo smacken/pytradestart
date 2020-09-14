@@ -6,7 +6,7 @@ chardet==3.0.4
 Click==7.1.2
 cloudpickle==1.6.0
 dask==2.26.0
-distributed==2.25.0
+distributed==2.26.0
 docutils==0.16
 featuretools==0.19.0
 fsspec==0.8.2
